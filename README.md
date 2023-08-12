@@ -41,7 +41,9 @@ Example for 27 (reads left to right then top to bottom):
 ```
 
 You can arrange these in blocks. There's a block with $12\cdot1$ extensions, a  block with $12 \cdot 2$ and a $3 \cdot 3$ block. This can be rewritten as $$f(27) = 3 \cdot 3 + 12(2 + 1)$$
-More generally for $n$, this can be rewritten as $$ f(n) = (n \mod 12) \lceil \frac{n}{12} \rceil + 12 \cdot (\frac{(\lceil \frac{n}{12} \rceil - 1)\cdot \lceil\frac{n}{12} \rceil}{2}) $$ $$ f(n) = (n \mod 12)\lceil \frac{n}{12} \rceil + 6\cdot(\lceil \frac{n}{12} \rceil^2-\lceil \frac{n}{12} \rceil) $$
+More generally for $n$, this can be rewritten as 
+$$ f(n) = (n \mod 12) \lceil \frac{n}{12} \rceil + 12 \cdot (\frac{(\lceil \frac{n}{12} \rceil - 1)\cdot \lceil\frac{n}{12} \rceil}{2}) $$ 
+$$ f(n) = (n \mod 12)\lceil \frac{n}{12} \rceil + 6\cdot(\lceil \frac{n}{12} \rceil^2-\lceil \frac{n}{12} \rceil) $$
 $$ f(n) = ((n \mod 12) - 6)\lceil \frac{n}{12} \rceil + 6\lceil \frac{n}{12} \rceil^2 $$
 python3 code to generate the piston extension sequence would be 
 ```python
